@@ -50,12 +50,16 @@
     selectedName.textContent = person.nama;
     selectedRepresentative.textContent = `Utusan: ${person.utusan}`;
     selection.hidden = false;
+    results.hidden = true;
+    results.style.display = 'none';
   }
 
   input.addEventListener('input', () => {
     hideError();
     selected = null;
     selection.hidden = true;
+    results.hidden = false;
+    results.style.display = '';
     const query = input.value.trim().toLocaleLowerCase('id-ID');
     const filtered = query ? participants.filter((person) => person.nama.toLocaleLowerCase('id-ID').includes(query)) : [];
     renderResults(filtered);

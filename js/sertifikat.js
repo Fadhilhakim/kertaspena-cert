@@ -361,6 +361,27 @@
           backgroundColor: null,
           width: WIDTH,
           height: HEIGHT,
+          windowWidth: WIDTH,
+          windowHeight: HEIGHT,
+          onclone: (clonedDoc) => {
+            // Elemen #certificate-scaler di-scale via CSS transform supaya
+            // muat di layar HP (lihat applyCertificateScale). html2canvas
+            // ikut membaca transform milik parent ini saat merender elemen
+            // target, sehingga hasil capture ikut mengecil mengikuti ukuran
+            // layar HP. Di dokumen kloningan (bukan tampilan asli), kita
+            // hapus transform tsb supaya sertifikat selalu ter-render penuh
+            // 1123x794px, apapun ukuran layar perangkatnya.
+            const clonedScaler = clonedDoc.getElementById('certificate-scaler');
+            if (clonedScaler) {
+              clonedScaler.style.transform = 'none';
+            }
+
+            const clonedViewport = clonedDoc.getElementById('certificate-viewport');
+            if (clonedViewport) {
+              clonedViewport.style.height = `${HEIGHT}px`;
+              clonedViewport.style.overflow = 'visible';
+            }
+          },
         });
 
         const imgData = canvas.toDataURL('image/png');
