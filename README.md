@@ -18,10 +18,6 @@ Aplikasi web self-service untuk pembagian sertifikat peserta kegiatan secara oto
 8. [Ekspor PDF](#ekspor-pdf)
 9. [Validasi & pesan error](#validasi--pesan-error)
 10. [Target performa (UX)](#target-performa-ux)
-11. [Deployment](#deployment)
-12. [Rencana pembangunan bertahap](#rencana-pembangunan-bertahap)
-13. [Prompt siap pakai untuk Claude Code](#prompt-siap-pakai-untuk-claude-code)
-
 ---
 
 ## Ringkasan
@@ -275,35 +271,5 @@ Tampilkan pesan ini di halaman terkait (bukan alert browser), dengan opsi untuk 
 | Generate sertifikat (render preview) | < 3 detik |
 | Download PDF | < 5 detik |
 | **Total (buka link → unduh PDF)** | **< 30 detik** |
-
----
-
-## Deployment
-
-Aplikasi murni statis (HTML/CSS/JS + JSON + gambar), tanpa backend, sehingga bisa langsung di-deploy ke:
-
-- **GitHub Pages**
-- **Vercel**
-- **Netlify**
-- Shared hosting biasa (upload folder via FTP/cPanel)
-
-Tidak perlu environment variable, tidak perlu server, tidak perlu build step (kecuali jika memilih memakai bundler seperti Vite — opsional).
-
----
-
-## Rencana pembangunan bertahap
-
-Urutan yang disarankan saat membangun aplikasi ini (baik manual maupun dengan bantuan Claude Code):
-
-1. **Setup struktur folder** sesuai [struktur proyek](#struktur-proyek) di atas, termasuk file JSON data dummy dan placeholder gambar.
-2. **Landing page**: dropdown kegiatan + navigasi ke search page dengan parameter URL.
-3. **Search page**: load JSON kegiatan terpilih, implementasi pencarian real-time, render hasil, navigasi ke halaman sertifikat.
-4. **Halaman sertifikat — layout statis**: bangun struktur HTML/CSS dengan absolute positioning sesuai [spesifikasi sertifikat](#spesifikasi-sertifikat), pakai data dummy dulu untuk memastikan tata letak presisi terhadap background.
-5. **Hubungkan data dinamis**: baca parameter URL, ambil data dari JSON, isi elemen sertifikat secara dinamis (nomor, nama, utusan, deskripsi kegiatan).
-6. **Implementasi download PDF** dengan html2canvas + jsPDF, uji hasil cetak di beberapa browser.
-7. **Styling akhir**: landing page & search page (identitas visual KERTAS PENA), efek bayangan pada preview sertifikat.
-8. **Validasi & error handling**: kegiatan/nama tidak ditemukan.
-9. **Uji lintas perangkat**: pastikan sertifikat identik di desktop, tablet, dan mobile (hanya beda skala tampilan, bukan layout).
-10. **Deploy** ke hosting statis pilihan.
 
 ---
