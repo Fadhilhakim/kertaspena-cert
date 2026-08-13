@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cari peserta untuk membuat sertifikat KERTAS PENA.">
+  <title>Pilih Peserta — Sertifikat Otomatis</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="site-body">
+  <main class="search-shell">
+    <section class="search-card" aria-labelledby="search-title">
+      <a class="back-link" href="../index.html">← Ganti kegiatan</a>
+      <p class="eyebrow">KEGIATAN TERPILIH</p>
+      <h1 id="search-title">Cari Nama Peserta</h1>
+      <p id="event-context" class="context-text">Memuat kegiatan...</p>
+
+      <div class="form-stack">
+        <label class="field-label" for="participant-search">Nama Peserta</label>
+        <input id="participant-search" class="text-control" type="search" placeholder="Nama Peserta" autocomplete="off">
+        <p id="page-error" class="field-error" role="alert" hidden></p>
+      </div>
+
+      <div id="results" class="result-list" aria-live="polite"></div>
+      <div id="selection" class="selection-card" hidden>
+        <div>
+          <span class="selection-label">Peserta terpilih</span>
+          <strong id="selected-name"></strong>
+          <span id="selected-representative" class="selection-meta"></span>
+        </div>
+        <button id="certificate-btn" class="primary-btn" type="button">Buat Sertifikat</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/events-config.js"></script>
+  <script src="../js/search.js"></script>
+</body>
+</html>

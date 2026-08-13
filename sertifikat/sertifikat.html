@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sertifikat — KERTAS PENA</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Do+Hyeon&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="certificate-page">
+  <main class="certificate-page-shell">
+    <div id="certificate-error" class="certificate-error" role="alert" hidden></div>
+
+    <div id="certificate-viewport" class="certificate-viewport">
+      <div id="certificate-scaler" class="certificate-scaler">
+        <div
+          id="certificate"
+          class="sertifikat"
+          style="position:relative; width:1123px; height:794px; overflow:hidden;">
+        </div>
+      </div>
+    </div>
+
+    <div class="certificate-actions">
+      <a id="back-search" class="secondary-btn" href="../index.html">Kembali</a>
+      <button id="download-btn" class="primary-btn" type="button">Download Sertifikat</button>
+    </div>
+
+    <div id="download-overlay" class="download-overlay" hidden>
+    <div class="download-box">
+      <div class="spinner"></div>
+      <h3>Menyiapkan sertifikat...</h3>
+      <p>Membutuhkan beberapa saat untuk menyiapkan sertifikat Anda.`</p>
+      <p id="download-status">Membuat file PDF</p>
+
+      <div class="progress-bar">
+        <div id="download-progress" class="progress-fill"></div>
+      </div>
+
+      <div id="download-percent" class="progress-percent">0%</div>
+    </div>
+</div>
+  </main>
+
+  <!-- jsPDF + svg2pdf: SVG remains vector during PDF generation. -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+
+  <script src="../js/events-config.js"></script>
+  <script src="../js/sertifikat.js"></script>
+
+</body>
+</html>
