@@ -178,7 +178,7 @@
       // Nomor sertifikat
       addCenteredText(
         certificate,
-        `Nomor: ${person.nomor}/${config.code}/TBM-KERTAS_PENA/GAKDE-BACA/VII/2026`,
+        `Nomor: ${person.nomor}/${config.code}/TBM-KERTAS_PENA/GAKDE-BACA/${config.monthRoman}/2026`,
         225,
         {
           fontSize: '18px',
