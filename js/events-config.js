@@ -20,6 +20,7 @@ window.EVENTS = {
     descriptionPrefix: 'Telah mengikuti',
   },
   'poster-media-sosial': {
+<<<<<<< HEAD
     label: 'Pelatihan Pembuatan Poster dan Pengelolaan Media Sosial Komunitas',
     date: '23 Agustus 2026',
     code: 'PMS',
@@ -28,6 +29,16 @@ window.EVENTS = {
     background: '../assets/background/bg-poster.png',
     descriptionPrefix: 'Telah mengikuti',
     location: 'Sekretariat TBM Kertas Pena Campagaya',
+=======
+  label: 'Pelatihan Pembuatan Poster dan Pengelolaan Media Sosial Komunitas',
+  date: '23 Agustus 2026',
+  code: 'PMS',
+  monthRoman: 'VIII',
+  data: '../data/poster-media-sosial.json',
+  background: '../assets/background/bg-poster.png',
+   descriptionPrefix: 'Telah mengikuti',
+   location: 'Sekretariat TBM Kertas Pena Campagaya',
+>>>>>>> cd555ae30ece356b0350741e8bcc28827502eda6
   },
   'konten-budaya': {
     label: 'Workshop Menulis Konten Budaya Lokal',
