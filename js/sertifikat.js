@@ -202,7 +202,7 @@
       });
 
       // Utusan
-      addCenteredText(certificate, `Utusan: ${person.utusan}`, 350, {
+      addCenteredText(certificate, `${person.utusan}`, 350, {
         fontSize: '22px',
         color: '#3e4a53',
       });
