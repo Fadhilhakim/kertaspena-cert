@@ -103,7 +103,7 @@
       top: '432px',
       left: '0',
       width: `${WIDTH}px`,
-    }, 'yang diselenggarakan oleh TBM Kertas Pena Campagaya TBM KERTAS PENA Campagaya sebagai penerima Bantuan Pemerintah');
+    }, 'yang diselenggarakan oleh TBM Kertas Pena Campagaya sebagai penerima Bantuan Pemerintah Bidang Kebahasaan');
 
     // Baris 3
     const line3 = addEl(group, 'div', {
@@ -112,7 +112,7 @@
       left: '0',
       width: `${WIDTH}px`,
     });
-    line3.appendChild(document.createTextNode('Bidang Kebahasaan dan Kesastraan: Fasilitasi Bagi Komunitas Literasi Tahun 2026 dengan judul kegiatan “'));
+    line3.appendChild(document.createTextNode('dan Kesastraan: Fasilitasi Bagi Komunitas Literasi Tahun 2026 dengan judul kegiatan “'));
     addEl(line3, 'span', {
       fontWeight: '700',
       color: '#1b2924',
